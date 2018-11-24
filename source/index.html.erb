@@ -24,10 +24,11 @@ title: Le Wagon - Middleman
     <% data.flats.each do |owner, flat| %>
     <div class="col-xs-12 col-sm-4">
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>');">
-        <div class="card-category">Rating: <%= flat.rating %></div>
+        <div class="card-category"><%= flat.city_name %></div>
         <div class="card-description">
           <h3><%= flat.name %></h3>
           <p><%= flat.description %></p>
+          <%= partial "layouts/ratings" %>
         </div>
         <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/<%= owner %>">
         <a class="card-link" href="/flats/<%= owner %>.html" ></a>

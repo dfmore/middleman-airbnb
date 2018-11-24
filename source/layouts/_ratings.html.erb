@@ -1,0 +1,8 @@
+<p class="rating">
+  <% flat.rating.times do |star| %>
+  <i class="fa fa-star" id="yellow-star"></i>
+  <% end %>
+  <% (5 - flat.rating).times do |star| %>
+  <i class="fa fa-star" id="gray-star"></i>
+  <% end %>
+</p>
